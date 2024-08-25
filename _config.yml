@@ -20,7 +20,7 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  about: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
