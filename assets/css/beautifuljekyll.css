@@ -62,6 +62,7 @@ layout: null
     margin-bottom: 8px;
     display: block; 
     box-sizing: border-box; /* Makes sure padding and border are included in the element's width and height */
+    border: 1px solid red;
 }
 
 html {
