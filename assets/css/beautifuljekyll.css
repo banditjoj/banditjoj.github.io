@@ -34,6 +34,18 @@ layout: null
     max-width: 1500px;
 }
 
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between the images */
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 1200px; 
+    height: auto;
+    display: block;
+}
+
 html {
   font-size: 100%
 }
