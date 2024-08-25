@@ -130,7 +130,7 @@ hr.small {
 :target:before {
   content: "";
   display: block;
-  height: 3.125rem; /* navbar height */
+  height: 2.125rem; /* navbar height */
   margin: -3.125rem 0 0;
 }
 
@@ -202,7 +202,7 @@ img {
 
 .navbar-custom .navbar-brand {
   line-height: 1.5;
-  padding-top: 0.625rem;
+  padding-top: 0rem;
   padding-bottom: 0.625rem;
   font-size: 1.125rem;
 }
