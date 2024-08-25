@@ -40,6 +40,7 @@ layout: null
     gap: 8px; /* Space between grid items */
     margin-bottom: 8px;
     justify-content: center; /* Center-aligns the grid items */
+    grid-auto-rows: auto; /* Automatically adjusts row height based on content */
 }
 
 .gallery img {
@@ -59,10 +60,6 @@ layout: null
 .rounded-bottom {
     border-radius: 8px;
     margin-bottom: 8px;
-    display: block; 
-    box-sizing: border-box; /* Makes sure padding and border are included in the element's width and height */
-    overflow: hidden;
-    border: 1px solid red;
 }
 
 html {
