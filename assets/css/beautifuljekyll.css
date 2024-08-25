@@ -51,9 +51,10 @@ layout: null
     border-radius: 8px; /* rounded corners */
 }
 
-img {
+.rounded-bottom {
     border-radius: 8px;
     margin-bottom: 8px;
+    display: block; 
 }
 
 html {
