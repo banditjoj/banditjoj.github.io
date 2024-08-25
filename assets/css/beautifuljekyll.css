@@ -60,6 +60,7 @@ layout: null
     border-radius: 8px;
     margin-bottom: 8px;
     display: block; 
+    box-sizing: border-box; /* Makes sure padding and border are included in the element's width and height */
 }
 
 html {
