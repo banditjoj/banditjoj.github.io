@@ -30,6 +30,9 @@ layout: null
   margin: 0 auto; /* Centering the div */
 }
 
+.container-md {
+    max-width: 1500px;
+}
 
 html {
   font-size: 100%
