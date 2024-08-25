@@ -51,6 +51,13 @@ layout: null
     border-radius: 8px; /* rounded corners */
 }
 
+.gallery-item {
+    display: flex;
+    justify-content: center; /* Center-aligns the image horizontally */
+    align-items: center; /* Center-aligns the image vertically */
+    overflow: hidden; /* Ensures that any overflow is clipped */
+}
+
 @media (max-width: 767px) {
     .gallery {
         grid-template-columns: 1fr; /* Switch to a single column */
