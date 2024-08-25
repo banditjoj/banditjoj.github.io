@@ -36,11 +36,10 @@ layout: null
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(2, 1fr); /* Creates a two-column layout */
+    gap: 8px; /* Space between grid items */
     margin-bottom: 8px;
-    justify-content: center;
-    grid-template-columns: 2fr;
+    justify-content: center; /* Center-aligns the grid items */
 }
 
 .gallery img {
