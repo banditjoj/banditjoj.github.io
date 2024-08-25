@@ -38,7 +38,8 @@ layout: null
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 8px;
-    padding: 8px;
+    padding: 0px;
+    margin: 0px;
     justify-content: center;
 }
 
@@ -47,7 +48,12 @@ layout: null
     height: auto;
     display: block;
     object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
-    border-radius: 8px; /* Optional: adds rounded corners */
+    border-radius: 8px; /* rounded corners */
+}
+
+img {
+    border-radius: 8px;
+    margin-bottom: 8px;
 }
 
 html {
