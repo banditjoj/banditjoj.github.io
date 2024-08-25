@@ -21,6 +21,7 @@ author: jojo lu
 
 navbar-links:
   About Me: "aboutme"
+  ejolu@live.com: "mailto:ejolu@live.com"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
