@@ -25,6 +25,11 @@ layout: null
 }
 
 /* --- General --- */
+.custom-width {
+  width: 1500px;
+  margin: 0 auto; /* Centering the div */
+}
+
 
 html {
   font-size: 100%
