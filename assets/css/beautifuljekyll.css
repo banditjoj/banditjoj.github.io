@@ -35,32 +35,18 @@ layout: null
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates a two-column layout */
-    gap: 8px; /* Space between grid items */
-    margin-bottom: 8px;
-    justify-content: center; /* Center-aligns the grid items */
-    grid-auto-rows: auto; /* Automatically adjusts row height based on content */
+  columns: 15rem 2;
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
-    border-radius: 8px; /* rounded corners */
-}
-
-.gallery-item {
-    display: flex;
-    justify-content: center; /* Center-aligns the image horizontally */
-    align-items: center; /* Center-aligns the image vertically */
-    overflow: hidden; /* Ensures that any overflow is clipped */
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 767px) {
     .gallery {
-        grid-template-columns: 1fr; /* Switch to a single column */
+        columns: 15rem 1;/* Switch to a single column */
     }
 }
 
