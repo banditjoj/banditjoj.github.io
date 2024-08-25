@@ -35,7 +35,7 @@ layout: null
 }
 
 .gallery {
-  columns: 15rem 2;
+  columns: 8px 2;
 }
 
 .gallery img {
@@ -46,7 +46,7 @@ layout: null
 
 @media (max-width: 767px) {
     .gallery {
-        columns: 15rem 1;/* Switch to a single column */
+        columns: 1;/* Switch to a single column */
     }
 }
 
