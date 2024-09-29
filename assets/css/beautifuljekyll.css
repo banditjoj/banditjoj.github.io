@@ -68,6 +68,25 @@ layout: null
     }
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between items */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        columns: 1;/* Switch to a single column */
+    }
+}
+
 .rounded-bottom {
     border-radius: 8px;
     margin-bottom: 8px;
