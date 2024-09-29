@@ -57,7 +57,13 @@ layout: null
 }
 
 @media (max-width: 767px) {
-    .gallery {
+    .gallery2 {
+        columns: 1;/* Switch to a single column */
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery3 {
         columns: 1;/* Switch to a single column */
     }
 }
