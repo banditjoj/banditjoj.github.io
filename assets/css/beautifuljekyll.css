@@ -39,12 +39,18 @@ layout: null
   column-gap: 8px;
 }
 
+.gallery2 img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
 .gallery3 {
   columns: 3;
   column-gap: 8px;
 }
 
-.gallery img {
+.gallery3 img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 8px;
