@@ -31,11 +31,16 @@ layout: null
 }
 
 .container-md {
-    max-width: 1500px;
+    max-width: 1800px;
 }
 
-.gallery {
+.gallery2 {
   columns: 2;
+  column-gap: 8px;
+}
+
+.gallery3 {
+  columns: 3;
   column-gap: 8px;
 }
 
