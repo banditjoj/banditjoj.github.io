@@ -77,7 +77,7 @@ layout: null
   padding: 1em;
 
   /* Translucent background */
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(224, 224, 224, 0.8);
 }
 
 /* Unhide the lightbox when it's the target */
