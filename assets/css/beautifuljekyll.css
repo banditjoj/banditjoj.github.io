@@ -41,11 +41,12 @@ layout: null
 }
 
 .gallery2 img {
-    height: 200px;                  /* Set a fixed height for uniformity */
-    width: auto;                    /* Allow width to adjust based on aspect ratio */
+    max-width: 500px;        
+    width: 100%
+    width: auto;      
     border-radius: 8px;
-    object-fit: cover;              /* Ensures the image fills the area without distortion */
-    flex-shrink: 0;                 /* Prevent images from shrinking */ 
+    object-fit: cover;         
+    flex-shrink: 0;             
 }
 
 .gallery3 {
