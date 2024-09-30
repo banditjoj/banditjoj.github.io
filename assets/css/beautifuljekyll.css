@@ -34,13 +34,13 @@ layout: null
     max-width: 1800px;
 }
 
-.gallery2 {
+.gallery {
     display: flex;
     justify-content: space-between; 
     gap: 8px;                 
 }
 
-.gallery2 img {
+.gallery img {
     max-height: 500px;        
     height: 100%
     width: auto;      
@@ -50,7 +50,7 @@ layout: null
 }
 
 @media (max-width: 767px) {
-    .gallery2 {
+    .gallery {
         columns: 1;/* Switch to a single column */
     }
 }
