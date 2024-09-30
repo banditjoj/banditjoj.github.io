@@ -42,7 +42,7 @@ layout: null
 }
 
 .gallery img {
-    max-height: 1000px;        
+    max-height: 800px;        
     height: 100%
     width: auto;      
     border-radius: 8px;
