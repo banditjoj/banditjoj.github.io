@@ -56,14 +56,9 @@ layout: null
         align-items: center; /* Center align items if needed */
     }
 
-  .gallery img {
-    max-height: 1500px;      
-    height: 100%
-    width: auto;      
-    border-radius: 8px;
-    object-fit: cover;         
-    flex-shrink: 0;             
-}
+.gallery img {
+        max-height: none; 
+    }
 }
 
 .rounded-bottom {
