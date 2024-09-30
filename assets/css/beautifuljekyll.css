@@ -52,7 +52,8 @@ layout: null
 
 @media (max-width: 767px) {
     .gallery {
-        columns: 1;/* Switch to a single column */
+        flex-direction: column; /* Change to a single column layout */
+        align-items: center; /* Center align items if needed */
     }
 }
 
@@ -73,7 +74,7 @@ layout: null
   right: 0;
   bottom: 0;
 
-  padding-top: 50px;
+  padding-top: 40px;
   
   /* Translucent background */
   background: rgba(224, 224, 224, 0.8);
