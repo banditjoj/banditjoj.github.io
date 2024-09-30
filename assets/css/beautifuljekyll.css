@@ -41,11 +41,11 @@ layout: null
 }
 
 .gallery2 img {
-    height: 500px;           
-    width: auto;              
-    flex-grow: 1;             
+    height: 200px;                  /* Set a fixed height for uniformity */
+    width: auto;                    /* Allow width to adjust based on aspect ratio */
     border-radius: 8px;
-    display: block;   
+    object-fit: cover;              /* Ensures the image fills the area without distortion */
+    flex-shrink: 0;                 /* Prevent images from shrinking */ 
 }
 
 .gallery3 {
@@ -55,11 +55,11 @@ layout: null
 }
 
 .gallery3 img {
-    height: 200px;           
-    width: auto;              
-    flex-grow: 1;             
+    height: 200px;                  /* Set a fixed height for uniformity */
+    width: auto;                    /* Allow width to adjust based on aspect ratio */
     border-radius: 8px;
-    display: block;       
+    object-fit: cover;              /* Ensures the image fills the area without distortion */
+    flex-shrink: 0;                 /* Prevent images from shrinking */   
 }
 
 @media (max-width: 767px) {
