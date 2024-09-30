@@ -39,8 +39,6 @@ layout: null
     justify-content: space-between; 
     gap: 8px;  
     margin-bottom: 8px;
-    scroll-padding-top: 130px;
-    scroll-behavior: smooth;
 }
 
 .gallery img {
@@ -100,6 +98,8 @@ layout: null
 }
 
 html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 130px;
   font-size: 100%
 }
 
