@@ -49,28 +49,8 @@ layout: null
     flex-shrink: 0;             
 }
 
-.gallery3 {
-    display: flex;
-    justify-content: space-between; 
-    gap: 8px;                 
-}
-
-.gallery3 img {
-    height: 200px;                  /* Set a fixed height for uniformity */
-    width: auto;                    /* Allow width to adjust based on aspect ratio */
-    border-radius: 8px;
-    object-fit: cover;              /* Ensures the image fills the area without distortion */
-    flex-shrink: 0;                 /* Prevent images from shrinking */   
-}
-
 @media (max-width: 767px) {
     .gallery2 {
-        columns: 1;/* Switch to a single column */
-    }
-}
-
-@media (max-width: 767px) {
-    .gallery3 {
         columns: 1;/* Switch to a single column */
     }
 }
