@@ -88,7 +88,7 @@ layout: null
 .lightbox span {
   /* Full width and height */
   display: block;
-  width: 100%;
+  max-width: 1500px;
   height: 100%;
 
   /* Size and position background image */
