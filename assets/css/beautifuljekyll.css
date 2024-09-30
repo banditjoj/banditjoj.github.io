@@ -68,10 +68,10 @@ layout: null
   /* Overlay entire screen */
   position: fixed;
   z-index: 999;
-  top: 0;
+  top: 30px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
 
   /* Translucent background */
   background: rgba(224, 224, 224, 0.8);
