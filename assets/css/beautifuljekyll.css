@@ -37,7 +37,8 @@ layout: null
 .gallery {
     display: flex;
     justify-content: space-between; 
-    gap: 8px;                 
+    gap: 8px;  
+    margin-bottom: 8px;
 }
 
 .gallery img {
