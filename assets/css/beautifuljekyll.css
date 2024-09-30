@@ -55,6 +55,15 @@ layout: null
         flex-direction: column; /* Change to a single column layout */
         align-items: center; /* Center align items if needed */
     }
+
+  .gallery img {
+    max-height: 1500px;      
+    height: 100%
+    width: auto;      
+    border-radius: 8px;
+    object-fit: cover;         
+    flex-shrink: 0;             
+}
 }
 
 .rounded-bottom {
