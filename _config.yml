@@ -57,7 +57,7 @@ social-network-links:
   # github: daattali
   instagram: banditjoj
   linkedin: banditjoj
-  twitter: banditjoj
+  # twitter: banditjoj
   # patreon: DeanAttali
   # youtube: "@daattali"
   # whatsapp: 15551212
@@ -81,7 +81,7 @@ social-network-links:
 #  kaggle: yourname
 #  hackerrank: yourname
 #  gitlab: yourname
-#  itchio: yourname
+   itchio: banditjoj
 #  untappd: yourname
 
 # If you want your website to generate an RSS feed, provide a description
