@@ -20,7 +20,9 @@ author: jojo lu
 ###############################################
 
 navbar-links:
+  sketchbook: "sketchbook"
   about: "aboutme"
+  professional: "professional"
   ejolu@live.com: "mailto:ejolu@live.com"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
