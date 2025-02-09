@@ -20,9 +20,12 @@ author: jojo lu
 ###############################################
 
 navbar-links:
+  bg design: "bgdesign"
+  animation + game dev: "animation"
   sketchbook: "sketchbook"
-  about: "aboutme"
   professional: "professional"
+  /
+  about: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
