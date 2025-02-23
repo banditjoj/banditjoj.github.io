@@ -21,14 +21,14 @@ author: jojo lu
 
 navbar-links:
   vis dev:
-    - AQO: "AQO.html"
-    - Life of Bunny Bun: "bunnybun.html"
+    - AQO: "AQO"
+    - Life of Bunny Bun: "bunnybun"
   personal:
-    - concept: "concept.html"
-    - bg design: "bgdesign.html"
-    - illust: "illust.html"
-    - sketchbook: "sketchbook.html"
-    - 3D, animation, etc.: "3D.html"
+    - concept: "concept"
+    - bg design: "bgdesign"
+    - illust: "illust"
+    - sketchbook: "sketchbook"
+    - 3D, animation, etc.: "3D"
   professional: "professional"
   /:
   about: "aboutme"
