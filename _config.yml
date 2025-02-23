@@ -20,9 +20,15 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  bg design: "bgdesign"
-  animation + game dev: "animation"
-  sketchbook: "sketchbook"
+  vis dev
+    - AQO: "AQO.html"
+    - Life of Bunny Bun: "bunnybun.html"
+  personal
+    - concept: "concept.html"
+    - bg design: "bgdesign.html"
+    - illust: "illust.html"
+    - sketchbook: "sketchbook.html"
+    - 3D, animation, etc.: "3D.html"
   professional: "professional"
   /
   about: "aboutme"
