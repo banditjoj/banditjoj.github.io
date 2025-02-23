@@ -1,19 +1,21 @@
 ---
 layout: page
 ---
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f3f3f3;
       margin: 0;
+      padding: 0;
     }
 
-    .container {
-      text-align: center;
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .lock-icon {
@@ -64,11 +66,20 @@ layout: page
     .info-text {
       font-size: 14px;
       color: #555;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #ddd;
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="center-container">
     <div class="lock-icon"></div>
     <div class="input-container">
       <input type="password" placeholder="Password">
