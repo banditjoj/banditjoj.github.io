@@ -20,12 +20,10 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  vis dev:
-    - AQO: "AQO"
-    - Life of Bunny Bun: "bunnybun"
+  vis dev: "visdev"
+  concept: "concept"
+  bg design: "bgdesign"
   personal:
-    - concept: "concept"
-    - bg design: "bgdesign"
     - illust: "illust"
     - sketchbook: "sketchbook"
     - 3D, animation, etc.: "3D"
