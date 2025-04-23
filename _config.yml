@@ -23,10 +23,8 @@ navbar-links:
   vis dev: "visdev"
   concept: "concept"
   bg design: "bgdesign"
-  personal:
-    - illust: "illust"
-    - sketchbook: "sketchbook"
-    - 3D, animation, etc.: "3D"
+  illust: "illust"
+  sketchbook: "sketchbook"
   professional: "professional"
   /:
   about: "aboutme"
