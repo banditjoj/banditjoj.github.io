@@ -20,16 +20,16 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  vis dev:
+  Vis Dev:
     - Inferno (WIP): "inferno"
     - AQO (2023): "aqo"
     - Life of Bunny Bun (2020): "bunnybun"
     - Nova City (2019): "novacity"
-  illust: "illust"
-  sketch: "sketch"
-  password: "password"
+  Illust: "illust"
+  Sketch: "sketch"
+  Password: "password"
   /:
-  about: "aboutme"
+  About: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
   B: "https://www.linkedin.com/in/banditjoj/"
   A : "https://www.instagram.com/banditjoj/"
