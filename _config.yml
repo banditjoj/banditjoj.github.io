@@ -21,9 +21,10 @@ author: jojo lu
 
 navbar-links:
   vis dev:
+    - Inferno (WIP): "inferno"
     - AQO (2023): "aqo"
     - Life of Bunny Bun (2020): "bunnybun"
-    - Nove City (2019): "novacity"
+    - Nova City (2019): "novacity"
   illust: "illust"
   sketch: "sketch"
   password: "password"
@@ -32,7 +33,7 @@ navbar-links:
   ejolu@live.com: "mailto:ejolu@live.com"
   b: "https://www.linkedin.com/in/banditjoj/"
   a: "https://www.instagram.com/banditjoj/"
-      #- Inferno (2025): "inferno"
+      
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
