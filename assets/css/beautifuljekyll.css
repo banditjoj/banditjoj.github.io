@@ -31,8 +31,8 @@ layout: null
 }
 
 .container-md {
-    width: 80%;
-    max-width: 1800px;
+    width: 100%;
+    max-width: 2000px;
 }
 
 .gallery {
