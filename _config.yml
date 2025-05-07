@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: jojo lu
+title:  jojo lu
 
 # Your name to show in the footer
 author: jojo lu
@@ -31,8 +31,8 @@ navbar-links:
   /:
   about: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
-  b: "https://www.linkedin.com/in/banditjoj/"
-  a: "https://www.instagram.com/banditjoj/"
+  B: "https://www.linkedin.com/in/banditjoj/"
+  A : "https://www.instagram.com/banditjoj/"
       
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
