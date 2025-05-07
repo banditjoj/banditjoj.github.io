@@ -24,6 +24,13 @@ layout: null
   --mid-col: #808080;
 }
 
+@font-face {
+  font-family: 'Glyphter';
+  src: url('/assets/css/fonts/Glyphter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* --- General --- */
 .custom-width {
   width: 100%;
@@ -247,6 +254,11 @@ img {
 .navbar-custom.top-nav-short-permanent {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/*Instagram font test*/
+.navbar-custom a[href*="instagram.com"] {
+  font-family: 'Glyphter', sans-serif !important;
 }
 
 .navbar-custom .navbar-brand {
