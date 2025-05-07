@@ -247,6 +247,8 @@ img {
   -webkit-transition: padding .5s ease-in-out;
   -moz-transition: padding .5s ease-in-out;
   transition: padding .5s ease-in-out;
+  padding-left: 20px !important;  /* Left padding */
+  padding-right: 20px !important; /* Right padding */
 }
 
 .navbar-custom,
