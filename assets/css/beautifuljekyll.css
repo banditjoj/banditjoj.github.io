@@ -415,11 +415,11 @@ img {
   }
 
   .navbar-custom .navbar-nav {
-    padding: 0.5rem 0.675rem;
+    padding: 0.5rem 1rem;
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    padding: 0.675rem 0 0.675rem 0.675rem;
+    padding: 0.675rem 0 0.675rem 0.5rem;
   }
 
   .navbar-custom .nav-item.dropdown.show {
