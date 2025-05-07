@@ -31,6 +31,7 @@ navbar-links:
   /:
   about: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
+  b: "https://www.linkedin.com/in/banditjoj/"
   a: "https://www.instagram.com/banditjoj/"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
