@@ -20,7 +20,8 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  vis dev & concept: "visdev"
+  vis dev: "visdev"
+  concept: "concept"
   bg design: "bgdesign"
   illust: "illust"
   sketchbook: "sketchbook"
