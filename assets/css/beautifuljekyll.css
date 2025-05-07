@@ -405,7 +405,7 @@ img {
 
 @media (min-width: 1200px) {
   .navbar-custom .nav-item.dropdown .dropdown-menu {
-    text-align: left;
+    text-align: right;
     min-width: max-content; /* Modern browsers */
     width: max-content; /* Expand to fit content */
     white-space: nowrap; /* Keep items in single line */
@@ -422,10 +422,14 @@ img {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 760px) {
   .navbar-custom .navbar-collapse {
     border-top: 1px solid var(--navbar-border-col);
     margin: 0 -1rem;
+  }
+
+  .navbar-collapse {
+    text-align: right;
   }
 
   .navbar-custom .navbar-nav {
