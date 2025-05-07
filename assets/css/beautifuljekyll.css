@@ -26,12 +26,13 @@ layout: null
 
 /* --- General --- */
 .custom-width {
-  width: 1800px;
+  width: 100%;
   margin: 0 auto; /* Centering the div */
 }
 
 .container-md {
-    max-width: 1800px;
+    width: 100%;
+    max-width: 2000px;
 }
 
 .gallery {
