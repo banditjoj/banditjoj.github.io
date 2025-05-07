@@ -20,10 +20,14 @@ author: jojo lu
 ###############################################
 
 navbar-links:
-  vis dev: "visdev"
+  vis dev: "index"
+    #- Inferno (2025): "inferno"
+    - AQO (2023): "aqo"
+    - Life of Bunny Bun (2020): "bunnybun"
+    - Nove City (2019): "novacity"
   illust: "illust"
-  sketchbook: "sketchbook"
-  professional: "professional"
+  sketch: "sketch"
+  password: "password"
   /:
   about: "aboutme"
   ejolu@live.com: "mailto:ejolu@live.com"
