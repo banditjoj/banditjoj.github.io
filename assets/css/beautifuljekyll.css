@@ -4,6 +4,13 @@ layout: null
 
 @import url("pygment_highlights.css");
 
+@font-face {
+  font-family: 'Glyphter';
+  src: url('/assets/css/fonts/Glyphter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* config file CSS variables */
   --page-col: {{ site.page-col | default: "#FFFFFF" }};
@@ -22,13 +29,6 @@ layout: null
   --body-font: 'Lora', 'Times New Roman', serif;
   --header-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mid-col: #808080;
-}
-
-@font-face {
-  font-family: 'Glyphter';
-  src: url('/assets/css/fonts/Glyphter.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* --- General --- */
@@ -247,8 +247,6 @@ img {
   -webkit-transition: padding .5s ease-in-out;
   -moz-transition: padding .5s ease-in-out;
   transition: padding .5s ease-in-out;
-  padding-left: 70px !important;  /* Left padding */
-  padding-right: 70px !important; /* Right padding */
 }
 
 .navbar-custom,
@@ -300,7 +298,7 @@ img {
 }
 
 .navbar-custom .navbar-nav .nav-item {
-  text-transform: uppercase;
+ /* text-transform: uppercase; */
   font-size: 0.8125rem;
   letter-spacing: 0.0625rem;
 }
