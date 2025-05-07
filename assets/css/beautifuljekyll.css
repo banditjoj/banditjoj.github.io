@@ -405,7 +405,10 @@ img {
 
 @media (min-width: 1200px) {
   .navbar-custom .nav-item.dropdown .dropdown-menu {
-    text-align: center;
+    text-align: left;
+    min-width: max-content; /* Modern browsers */
+    width: max-content; /* Expand to fit content */
+    white-space: nowrap; /* Keep items in single line */
   }
 
   .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
