@@ -257,6 +257,15 @@ img {
 
 /* --- Navbar --- */
 
+/* test */
+.navbar-container {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .navbar-custom {
   background-color: var(--navbar-col);
   border-bottom: 1px solid var(--navbar-border-col);
