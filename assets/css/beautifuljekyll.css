@@ -256,8 +256,12 @@ img {
   padding-bottom: 0;
 }
 
-/*Instagram font test*/
+/*Instagram LinkedIn font*/
 .navbar-custom a[href*="instagram.com"] {
+  font-family: 'Glyphter', sans-serif !important;
+}
+
+.navbar-custom a[href*="linkedin.com"] {
   font-family: 'Glyphter', sans-serif !important;
 }
 
@@ -415,7 +419,7 @@ img {
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    padding: 0.675rem 0 0.675rem 1rem;
+    padding: 0.675rem 0 0.675rem 0.675rem;
   }
 
   .navbar-custom .nav-item.dropdown.show {
