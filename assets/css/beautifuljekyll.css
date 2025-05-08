@@ -31,6 +31,14 @@ layout: null
   --mid-col: #808080;
 }
 
+.char-red { color: #e8514c !important; }    /* A */
+.char-orange { color: #ec8014 !important; } /* B */
+.char-yellow { color: #ebb10b !important; } /* C */
+.char-green { color: #86c944 !important; }  /* d */
+.char-blue { color: #44c9a8 !important; }   /* e */
+.char-indigo { color: #7eabe7 !important; } /* F */
+.char-violet { color: #b07ee7 !important; } /* G */
+
 /* --- General --- */
 .custom-width {
   width: 100%;
