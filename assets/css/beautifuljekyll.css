@@ -482,7 +482,7 @@ img {
   }
 
   .navbar-custom .navbar-nav .nav-link {
-    padding: 0.675rem 0 0.675rem 0.5rem;
+    padding: 0.675rem 0.5rem 0.675rem 0;
   }
 
   .navbar-custom .nav-item.dropdown.show {
