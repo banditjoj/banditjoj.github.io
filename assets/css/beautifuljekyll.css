@@ -6,7 +6,7 @@ layout: null
 
 @font-face {
   font-family: 'Glyphter';
-  src: url('/assets/css/fonts/Glyphter.woff') format('woff');
+  src: url('/assets/css/fonts/Glyphter.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
