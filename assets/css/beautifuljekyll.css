@@ -296,10 +296,11 @@ img {
 }
 
 .navbar-custom .navbar-brand {
+  font-family: 'Glyphter', sans-serif !important;
   line-height: 1.5;
   padding-top: 0rem;
   padding-bottom: 0.5rem;
-  font-size: 1.125rem;
+  font-size: 1.75rem;
 }
 
 .navbar-custom .navbar-brand-logo {
