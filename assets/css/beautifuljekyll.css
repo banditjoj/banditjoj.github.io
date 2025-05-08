@@ -257,15 +257,6 @@ img {
 
 /* --- Navbar --- */
 
-/* test */
-.navbar-container {
-  max-width: 1800px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .navbar-custom {
   background-color: var(--navbar-col);
   border-bottom: 1px solid var(--navbar-border-col);
@@ -300,7 +291,7 @@ img {
   line-height: 1.0;
   padding-top: 0rem;
   padding-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 
 .navbar-custom .navbar-brand-logo {
