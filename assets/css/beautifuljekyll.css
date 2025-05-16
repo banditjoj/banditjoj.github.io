@@ -465,7 +465,7 @@ img {
 
   /* test to smaller logo on mobile*/
   .navbar-custom .navbar-brand-logo img {
-    height: 2.5rem;
+    height: 2rem;
   }
 
   .navbar-custom .dropdown-menu {
