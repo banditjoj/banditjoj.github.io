@@ -29,8 +29,8 @@ navbar-links:
   SKETCH: "sketch"
   OTHER:
     - 3D: "3d"
-    - Animation: "animation"
     - Game: "game"
+    - Animation: "animation"
   PASSWORD:
     - Mighty Nein (2024 - 25): "password"
     - Iyanu - Child of Wonder (2024): "password"
