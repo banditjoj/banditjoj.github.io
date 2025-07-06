@@ -32,13 +32,13 @@ navbar-links:
     - Game: "game"
     - Animation: "animation"
   PROFESSIONAL:
-    - Mighty Nein (2024 - 25): "password"
-    - Iyanu - Child of Wonder (2024): "password"
-    - Passion Pictures (2023): "password"
-    - Microsoft (2020 - 23): "password"
+    - Mighty Nein (2024 - 25)*: "password"
+    - Iyanu - Child of Wonder (2024)*: "password"
+    - Passion Pictures (2023)*: "password"
+    - Microsoft (2020 - 23)*: "password"
     - Emma (2021): "emma"
     - DNEG (2020): "password"
-    - Archer - Danger Phone (2020): "archer"
+    - Archer - Danger Phone (2020)*: "archer"
   /:
   ABOUT: "about"
   EJOLU@LIVE.COM: "mailto:ejolu@live.com"
