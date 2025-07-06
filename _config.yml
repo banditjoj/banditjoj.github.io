@@ -25,9 +25,6 @@ navbar-links:
     - AQO (2023): "aqo"
     - Life of Bunny Bun (2020): "bunnybun"
     - Nova City (2020): "novacity"
-  ILLUST: "illust"
-  SKETCH: "sketch"
-  3D&OTHER: "3d"
   PROFESSIONAL:
     - *Mighty Nein (2024 - 25): "password"
     - *Iyanu - Child of Wonder (2024): "password"
@@ -36,6 +33,9 @@ navbar-links:
     - Emma (2021): "emma"
     - *DNEG (2020): "password"
     - Archer - Danger Phone (2020): "archer"
+  ILLUST: "illust"
+  SKETCH: "sketch"
+  3D&OTHER: "3d"
   /:
   ABOUT: "about"
   EJOLU@LIVE.COM: "mailto:ejolu@live.com"
