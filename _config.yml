@@ -27,10 +27,7 @@ navbar-links:
     - Nova City (2020): "novacity"
   ILLUST: "illust"
   SKETCH: "sketch"
-  OTHER:
-    - 3D: "3d"
-    - Game: "game"
-    - Animation: "animation"
+  3D&OTHER: "3d"
   PROFESSIONAL:
     - Mighty Nein (2024 - 25)*: "password"
     - Iyanu - Child of Wonder (2024)*: "password"
