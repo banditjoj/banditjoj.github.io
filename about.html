@@ -2,10 +2,13 @@
 layout: page
 ---
 
+<div class="custom-container-text">
+
 <head>
   <style>
     body {
       font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
       padding: 40px;
       color: #111;
     }
@@ -14,7 +17,7 @@ layout: page
       display: flex;
       align-items: center;
       gap: 40px;
-      max-width: 1800px;
+      max-width: 1500px;
       margin: auto;
       background: #eee;
       padding: 40px;
@@ -24,6 +27,7 @@ layout: page
     .profile-img {
       width: 250px;
       height: 250px;
+      border-radius: 10px;
       object-fit: cover;
     }
 
@@ -34,13 +38,19 @@ layout: page
     }
 
     .content h1 span {
-      color: #0085a1;
+      color: #ff4c4c;
     }
 
     .content p {
       font-size: 20px;
       line-height: 1.6;
       font-weight: 600;
+    }
+
+    .content .korean {
+      font-size: 26px;
+      font-weight: 400;
+      margin-top: 20px;
     }
 
     .email {
@@ -63,10 +73,12 @@ layout: page
       <h1>hi, i'm <span>jojo lu</span></h1>
       <p>I'm a concept & vis dev artist with a wide skill set from animation to game dev.</p>
       <p>Currently open for new projects! Nowadays in LA with a dog, Zeus. Always striving to learn new things and improve my craft.</p>
-      <p>최근에 한국어를 배우고 있어요. 연습 좀 도와주실 수 있나요?</p>
+      <p class="korean">최근에 한국어를 배우고 있어요. 연습 좀 도와주실 수 있나요?</p>
       <p class="email">get in touch → <span>ejolu@live.com</span></p>
     </div>
   </div>
 
 </body>
 </html>
+  
+</div>
