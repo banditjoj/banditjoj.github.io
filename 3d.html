@@ -12,3 +12,35 @@ layout: page
 <br>I can do this but you probably want someone better: animation, rigging, uvs, retopology, simulation
 </center>
 
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+<style>
+  .rainbow-text {
+    font-family: 'Comic Neue', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .rainbow-text span {
+    display: inline-block;
+  }
+</style>
+
+<div class="rainbow-text" id="rainbowText"></div>
+
+<script>
+  const text = "graphic design is my passion";
+  const colors = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#8F00FF"];
+  const container = document.getElementById('rainbowText');
+
+  for (let i = 0; i < text.length; i++) {
+    const span = document.createElement('span');
+    span.textContent = text[i];
+    if (text[i] !== ' ') {
+      span.style.color = colors[i % colors.length];
+    } else {
+      span.style.margin = "0 0.25em";
+    }
+    container.appendChild(span);
+  }
+</script>
