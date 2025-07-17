@@ -2,9 +2,13 @@
 layout: page
 ---
 <div class="custom-container-project">
-<p style="text-align:center; margin-bottom: 0.5em;">
+  
+<!-- Intro Line -->
+<p style="text-align:center; margin: 0 0 0.5em 0; font-size: 18px;">
   You might be here because you're wondering if I'm capable of using 3D software for your production.
 </p>
+
+<!-- Flex Layout Styles -->
 <style>
   .two-column-container {
     display: flex;
@@ -13,7 +17,7 @@ layout: page
     align-items: flex-start;
     gap: 2em;
     max-width: 1200px;
-    margin: 3em auto;
+    margin: 0 auto;
     padding: 0 1em;
   }
 
@@ -27,6 +31,11 @@ layout: page
     font-size: 16px;
   }
 
+  .instagram-media {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
   @media (max-width: 768px) {
     .two-column-container {
       flex-direction: column;
@@ -38,31 +47,26 @@ layout: page
   }
 </style>
 
+<!-- Two Columns -->
 <div class="two-column-container">
-  <!-- Left column: Short answer + Video -->
+  <!-- Left column -->
   <div class="column">
-    <p style="text-align: center;">
-     <strong>Short Answer:</strong>
-    </p>
-    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLXrIrGMFQT/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:100%;">
-      <div style="padding:16px;"> <!-- Instagram embed starts here -->
-        <!-- ... all your existing Instagram embed code ... -->
+    <p style="text-align: center; margin-top: 0;"><strong>Short Answer:</strong></p>
+
+    <blockquote class="instagram-media"
+      data-instgrm-permalink="https://www.instagram.com/reel/DLXrIrGMFQT/?utm_source=ig_embed&amp;utm_campaign=loading"
+      data-instgrm-version="14"
+      style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0; padding:0; width:100%;">
+      <div style="padding:0;"> <!-- padding removed -->
+        <!-- Instagram embed will go here -->
       </div>
     </blockquote>
+
     <script async src="//www.instagram.com/embed.js"></script>
   </div>
 
-  <!-- Right column: Long answer -->
-  <div class="column long-answer">
-    <p><strong>Long Answer:</strong> I've been using Blender since 2.6, and other 3D software before that.</p>
-
-    <ul style="padding-left: 1.2em;">
-      <li><strong>I can do this while having a conversation:</strong> modelling, texturing, materials (PBR + NPBR)</li>
-      <li><strong>I can do this while listening to music:</strong> sculpting, geometry nodes, grease pencil, UVs, compositing</li>
-      <li><strong>I can do this but you probably want someone better:</strong> animation, rigging, retopology, simulation</li>
-    </ul>
-  </div>
-</div>
+  <!-- Right column -->
+  <div class=
   
 <!-- Rainbow Gradient Text -->
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
