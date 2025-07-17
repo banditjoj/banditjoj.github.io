@@ -13,28 +13,27 @@ layout: page
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 2em;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1em;
   }
 
-.column {
-  flex: 1 1 0;
-  min-width: 300px;
-  max-width: 500px;
-  box-sizing: border-box;
-  line-height: 1.6;
-  font-size: 16px;
-}
+  .column {
+    flex: 1 1 300px;
+    max-width: 550px;
+  }
 
-.instagram-media {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  max-width: 100% !important;
-  width: 100% !important;
-}
+  .long-answer {
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .instagram-media {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 
   @media (max-width: 768px) {
     .two-column-container {
@@ -66,7 +65,7 @@ layout: page
   </div>
 
   <!-- Right column -->
-  <div class="column">
+  <div class="column long-answer">
     <p><strong>Long Answer:</strong> I've been using Blender since 2.6, and other 3D software before that.</p>
     <ul style="padding-left: 1.2em;">
       <li><strong>I can do this while having a conversation:</strong> modelling, texturing, materials (PBR + NPBR)</li>
@@ -75,6 +74,7 @@ layout: page
     </ul>
   </div>
 </div>
+
 
 <p style="text-align:center; margin: 0 0 0.5em 1em; font-size: 18px;">
   <strong>Animation</strong>: animation done in Photoshop and Blender, sound editing in Audacity, compositing in After Effects
