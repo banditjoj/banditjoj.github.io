@@ -28,6 +28,12 @@ layout: page
     font-size: 16px;
   }
 
+  .custom-container-graphic {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; /* Centers the container */
+  }
+  
   .skill-list {
     list-style: none;
     padding-left: 0;
@@ -232,9 +238,16 @@ layout: page
   }
 </script>
 
-<center>
-  <img src="https://banditjoj.github.io/assets/img/other/wcburgerhut.jpg">
-  <br><img src="https://banditjoj.github.io/assets/img/other/octopus.jpg">
-  <br><img src="https://banditjoj.github.io/assets/img/other/title.jpg">
-  <br><img src="https://banditjoj.github.io/assets/img/other/pixel.jpg">
-</center>
+<div class = "custom-container-graphic">
+
+<div id="1" class="gallery" style="--gallery-height: 700px;">
+<a href="#img1"><img src="https://banditjoj.github.io/assets/img/other/wcburgerhut.jpg"></a>
+<a href="#img2"><img src="https://banditjoj.github.io/assets/img/other/octopus.jpg"></a>
+</div>
+
+<div id="2" class="gallery" style="--gallery-height: 700px;">
+<a href="#img3"><img src="https://banditjoj.github.io/assets/img/other/title.jpg"></a>
+<a href="#img4"><img src="https://banditjoj.github.io/assets/img/other/pixel.jpg"></a>
+</div>
+
+</div>
