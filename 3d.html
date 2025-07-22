@@ -3,7 +3,7 @@ layout: page
 ---
 
 <p style="text-align:center; margin-bottom: 0.5em;">
-  Not sure if I’ve got the 3D skills for your production?
+  Not sure if I've got the 3D skills for your production?
 </p>
 
 <style>
@@ -41,10 +41,44 @@ layout: page
     margin-left: 0.4em;
   }
   
-  /* On smaller screens, constrain to 400px */
+  /* Games section styling */
+  .games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .game-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .game-item img {
+    flex-shrink: 0;
+  }
+  
+  .game-item iframe {
+    flex-shrink: 0;
+  }
+  
+  /* On smaller screens, stack vertically */
   @media (max-width: 768px) {
     .video-wrapper {
       max-width: 400px;
+    }
+    .game-item {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .games-container {
+      max-width: 100%;
+      padding: 0 1em;
     }
   }
 
@@ -134,14 +168,27 @@ layout: page
   </ul>
 </div>
 
-<div align="center">
+<div class="games-container">
+  <div class="game-item">
+    <img src="https://banditjoj.github.io/assets/img/other/RSQUARED.gif" alt="RSQUARED Game Preview">
+    <iframe frameborder="0" src="https://itch.io/embed/559823?bg_color=4a2c37&amp;fg_color=adab92&amp;link_color=a8ecb6&amp;border_color=72545f" width="552" height="167">
+      <a href="https://banditjoj.itch.io/ggj20">RSQUARED by jojo lu</a>
+    </iframe>
+  </div>
 
-<img src="https://banditjoj.github.io/assets/img/other/RSQUARED.gif"><iframe frameborder="0" src="https://itch.io/embed/559823?bg_color=4a2c37&amp;fg_color=adab92&amp;link_color=a8ecb6&amp;border_color=72545f" width="552" height="167"><a href="https://banditjoj.itch.io/ggj20">RSQUARED by jojo lu</a></iframe>
+  <div class="game-item">
+    <img src="https://banditjoj.github.io/assets/img/other/NoPlace.gif" alt="No Place Game Preview">
+    <iframe frameborder="0" src="https://itch.io/embed/360958?bg_color=129bac&amp;fg_color=ffc0dd&amp;link_color=15d1c9&amp;border_color=2db6c7" width="552" height="167">
+      <a href="https://banditjoj.itch.io/ggj19">a place called home by jojo lu</a>
+    </iframe>
+  </div>
 
-<br><img src="https://banditjoj.github.io/assets/img/other/NoPlace.gif"><iframe frameborder="0" src="https://itch.io/embed/360958?bg_color=129bac&amp;fg_color=ffc0dd&amp;link_color=15d1c9&amp;border_color=2db6c7" width="552" height="167"><a href="https://banditjoj.itch.io/ggj19">a place called home by jojo lu</a></iframe>
-
-<br><img src="https://banditjoj.github.io/assets/img/other/CCB.gif"><iframe frameborder="0" src="https://itch.io/embed/177295?bg_color=d86ce5&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=b164cc" width="552" height="167"><a href="https://banditjoj.itch.io/ccb">Cook Cook Boom! by jojo lu</a></iframe>
-
+  <div class="game-item">
+    <img src="https://banditjoj.github.io/assets/img/other/CCB.gif" alt="Cook Cook Boom Game Preview">
+    <iframe frameborder="0" src="https://itch.io/embed/177295?bg_color=d86ce5&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=b164cc" width="552" height="167">
+      <a href="https://banditjoj.itch.io/ccb">Cook Cook Boom! by jojo lu</a>
+    </iframe>
+  </div>
 </div>
 
 <!-- Rainbow Gradient Text -->
