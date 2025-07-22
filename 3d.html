@@ -18,10 +18,25 @@ layout: page
     padding: 0 1em;
   }
 
-  .graphic-container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto; /* Centers the container */
+.graphic-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the container */
+    padding: 0 1em; /* Add some padding for mobile */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+  }
+
+  /* Make sure the galleries inside are also properly contained */
+  .graphic-container .gallery {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Optional: Add responsive behavior for smaller screens */
+  @media (max-width: 1040px) {
+    .graphic-container {
+      padding: 0 20px;
+    }
   }
 
   .column {
