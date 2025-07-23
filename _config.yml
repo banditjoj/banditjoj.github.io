@@ -21,7 +21,7 @@ author: jojo lu
 
 navbar-links:
   VIS DEV:
-    - Inferno (WIP): "inferno"
+    #- Inferno (WIP): "inferno"
     - AQO (2023): "aqo"
     - Life of Bunny Bun (2020): "bunnybun"
     - Nova City (2020): "novacity"
