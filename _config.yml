@@ -22,9 +22,9 @@ author: jojo lu
 navbar-links:
   VIS DEV:
     #- Inferno (WIP): "inferno"
-    - AQO (2023): "aqo"
-    - Life of Bunny Bun (2020): "bunnybun"
-    - Nova City (2020): "novacity"
+    - AQO: "aqo"
+    - Life of Bunny Bun: "bunnybun"
+    - Nova City: "novacity"
   PROFESSIONAL:
     - Mighty Nein (2024 - 25*): "password"
     - Iyanu - Child of Wonder (2024*): "password"
