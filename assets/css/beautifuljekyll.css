@@ -41,7 +41,7 @@ layout: null
 
 /* --- General --- */
 .custom-width {
-  width: 100%;
+  width: 90%;
   margin: 0 auto; /* Centering the div */
 }
 
@@ -66,8 +66,8 @@ layout: null
 .gallery {
     display: flex;
     justify-content: space-between; 
-    gap: 8px;  
-    margin-bottom: 8px;
+    gap: 16px;  
+    margin-bottom: 16px;
 }
 
 .gallery img {
