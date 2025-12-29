@@ -19,15 +19,53 @@ layout: page
 <meta name="twitter:description" content="JoJo Lu is a concept and vis dev artist with a broad creative toolkit from pencil stubs to Blender (and Ctrl+Z in between). They love harnessing the magic of visual storytelling to express what words cannot. Driven by a mix of curiosity and play, they are always experimenting with new techniques to keep levelling up their craft." />
 <meta name="twitter:image" content="https://banditjoj.com/assets/img/JoJoLu-LionPrince.jpg" />
 
-<!-- Games -->
-<div style="max-width: 700px; margin: 0 auto; padding: 1em 2em;">
-  <h3 style="margin-top: 1.5rem;">Software</h3>
-  <ul class="skill-list">
-    <li><strong>3D</strong><span>— Blender, Gravity Sketch, Plasticity</span></li>
-    <li><strong>Animation</strong><span>— Clip Studio Paint, Blender, Photoshop</span></li>
-    <li><strong>Music & Sound</strong><span>— Ableton Live, Audacity, Medly</span></li>
-    <li><strong>Compositing</strong><span>— After Effects, Blender</span></li>
-    <li><strong>Programming</strong><span>— Unity</span></li>
-    <li>all animation on <a href="https://www.youtube.com/@banditjoj">youtube</a> / all games on <a href="https://banditjoj.itch.io/">itch.io</a></li>
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-label {
+  font-weight: 600;
+}
+
+.skill-tools {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+<div class="skills-wrapper">
+  <h3 class="skills-title">Software</h3>
+
+  <ul class="skills-list">
+    <li>
+      <span class="skill-label">3D</span>
+      <span class="skill-tools">Blender, Gravity Sketch, Plasticity</span>
+    </li>
+    <li>
+      <span class="skill-label">Animation</span>
+      <span class="skill-tools">Clip Studio Paint, Blender, Photoshop</span>
+    </li>
+    <li>
+      <span class="skill-label">Music & Sound</span>
+      <span class="skill-tools">Ableton Live, Audacity, Medly</span>
+    </li>
+    <li>
+      <span class="skill-label">Compositing</span>
+      <span class="skill-tools">After Effects, Blender</span>
+    </li>
+    <li>
+      <span class="skill-label">Programming</span>
+      <span class="skill-tools">Unity</span>
+    </li>
   </ul>
 </div>
+
+
