@@ -109,13 +109,13 @@ layout: null
     height: var(--gallery-height);
 }
 
-/* THIS is the critical fix */
 .gallery.two-stack .right img,
 .gallery.two-stack .right video {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    flex-shrink: 0; /* ← prev*
+    max-height: 48%;          /* allows proportional scaling */
+    object-fit: contain;     /* no cropping */
+}
 
 /* Mobile */
 @media (max-width: 760px) {
