@@ -82,6 +82,35 @@ layout: null
     height: auto; 
 }
 
+.gallery.two-stack {
+    align-items: stretch; /* IMPORTANT */
+}
+
+/* Left column */
+.gallery.two-stack .left {
+    flex: 1;
+    display: flex;
+}
+
+.gallery.two-stack .left img {
+    height: var(--gallery-height);
+    width: 100%;
+}
+
+/* Right column */
+.gallery.two-stack .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Stack images */
+.gallery.two-stack .right img {
+    height: calc((var(--gallery-height) - 16px) / 2);
+    width: 100%;
+}
+
 /* Mobile */
 @media (max-width: 760px) {
     .gallery {
