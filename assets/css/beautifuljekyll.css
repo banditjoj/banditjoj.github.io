@@ -84,10 +84,10 @@ layout: null
 
 /* Stacking */
 .gallery.two-stack {
-    align-items: stretch; /* IMPORTANT */
+    align-items: stretch;
 }
 
-/* Left column */
+/* Left column: single image defines height */
 .gallery.two-stack .left {
     flex: 1;
     display: flex;
@@ -95,52 +95,28 @@ layout: null
 
 .gallery.two-stack .left img {
     height: var(--gallery-height);
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* Right column */
+/* Right column: spacing-driven stack */
 .gallery.two-stack .right {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-/* Stack images */
-.gallery.two-stack .right img {
-    height: calc((var(--gallery-height) - 16px) / 2);
-    width: 100%;
-}
-
-.gallery.left-stack {
-    align-items: stretch; /* IMPORTANT */
-}
-
-/* Left column (stacked) */
-.gallery.left-stack .left {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* Stack images on the left */
-.gallery.left-stack .left img {
-    height: calc((var(--gallery-height) - 16px) / 2);
-    width: 100%;
-}
-
-/* Right column (single image) */
-.gallery.left-stack .right {
-    flex: 1;
-    display: flex;
-}
-
-/* Right image fills full height */
-.gallery.left-stack .right img {
+    justify-content: space-between; /* spacing absorbs mismatch */
     height: var(--gallery-height);
-    width: 100%;
 }
+
+/* Right images: NO forced height */
+.gallery.two-stack .right img,
+.gallery.two-stack .right video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* prevents cropping */
+}
+
 
 /* Mobile */
 @media (max-width: 760px) {
