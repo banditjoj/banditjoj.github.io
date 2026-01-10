@@ -82,41 +82,6 @@ layout: null
     height: auto; 
 }
 
-/* Stacking */
-.gallery.two-stack {
-    align-items: stretch;
-}
-
-/* Left column: single image */
-.gallery.two-stack .left {
-    flex: 1;
-    display: flex;
-}
-
-.gallery.two-stack .left img {
-    height: var(--gallery-height);
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-/* Right column: stacked, spacing-driven */
-.gallery.two-stack .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: var(--gallery-height);
-}
-
-.gallery.two-stack .right img,
-.gallery.two-stack .right video {
-    width: 100%;
-    height: auto;
-    max-height: 48%;          /* allows proportional scaling */
-    object-fit: contain;     /* no cropping */
-}
-
 /* Mobile */
 @media (max-width: 760px) {
     .gallery {
