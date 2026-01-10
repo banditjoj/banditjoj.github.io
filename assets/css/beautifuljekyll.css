@@ -87,39 +87,36 @@ layout: null
     align-items: stretch;
 }
 
-/* Left column stays fixed height */
+/* Left column */
 .gallery.two-stack .left {
     flex: 1;
     display: flex;
 }
 
-.gallery.two-stack .left img {
+.gallery.two-stack .left img,
+.gallery.two-stack .left video {
     height: var(--gallery-height);
     width: auto;
     max-width: 100%;
+    object-fit: cover;
 }
 
-/* Right column becomes spacing-driven */
+/* Right column */
 .gallery.two-stack .right {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* THIS is the magic */
-    height: var(--gallery-height);
+    justify-content: space-between;
+    height: var(--gallery-height); /* THIS is what fixes it */
 }
 
-/* Right images: no forced height */
+/* Right items */
 .gallery.two-stack .right img,
 .gallery.two-stack .right video {
     height: auto;
-    max-he
-
-.gallery.two-stack .right > *:first-child {
-    align-self: flex-start;
-}
-
-.gallery.two-stack .right > *:last-child {
-    align-self: flex-end;
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain; /* no crop */
 }
 
 
