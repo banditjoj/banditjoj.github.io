@@ -102,7 +102,59 @@ layout: page
       min-height: 500px;
     }
   }
+
+ .skills-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.skills-title {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.skills-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.skill-card {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.skill-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.skill-tools {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+}
+
+/* hover */
+.skill-card:hover {
+  background: #D9E4FF;
+} 
 </style>
+
+
 <div class="intro">
   <img src="https://banditjoj.com/assets/img/about/JoJoLu-PFP.png" alt="JoJo Lu portrait">
   <div>
