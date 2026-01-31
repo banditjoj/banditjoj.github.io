@@ -162,7 +162,6 @@ layout: null
   background: rgba(224, 224, 224, 0.8);
 }
 
-/* Show when targeted */
 .lightbox-video:target {
   display: block;
 }
@@ -182,6 +181,20 @@ layout: null
 
   transform: translate(-50%, -50%);
 }
+
+/* Click layer to close */
+.lightbox-video::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  cursor: pointer;
+}
+
 
 html {
   scroll-behavior: smooth;
