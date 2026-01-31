@@ -135,13 +135,52 @@ layout: null
   background-repeat: no-repeat;
   background-size: contain;
 
-  /* max width 19200 */
+  /* max width 1920 */
   max-width: 1920px;
   margin: 0 auto;
   width: auto;
   position: relative;
   left: 0;
   right: 0;
+}
+
+/* Video Lightbox */
+
+.lightbox-video {
+  display: none;
+
+  position: fixed;
+  z-index: 999;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding-top: 40px;
+
+  background: rgba(224, 224, 224, 0.8);
+}
+
+/* Show when targeted */
+.lightbox-video:target {
+  display: block;
+}
+
+/* Center video */
+.lightbox-video video {
+  display: block;
+
+  max-width: 90%;
+  max-height: 90vh;
+
+  margin: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 html {
