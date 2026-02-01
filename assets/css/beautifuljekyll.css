@@ -866,6 +866,15 @@ img {
   }
 }
 
+/* Transparent navbar when scrolled */
+.navbar-custom.top-nav-short,
+.navbar-custom.top-nav-short-permanent {
+  background-color: rgba(255, 255, 255, 0); /* fully transparent */
+  border-bottom: none; 
+  transition: background-color 0.5s ease, padding 0.5s ease;
+}
+
+
 /* --- Footer --- */
 
 footer {
