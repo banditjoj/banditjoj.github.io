@@ -636,8 +636,7 @@ img {
 }
 
 .navbar-custom .navbar-nav .nav-link {
-  line-height: 1.25rem;
-  padding-top: 0.9375rem;
+  padding-top: 0.75rem;   /* reduced from 0.9375rem */
   padding-bottom: 0.675rem;
 }
 
