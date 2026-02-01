@@ -305,24 +305,29 @@ layout: null
   display: block;
 }
 
-/* Footer Gallery Grid */
+/* Footer Gallery Grid - Full Width */
 .footer-gallery {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
 
-  max-width: 1200px;
-  margin: 40px auto 20px;
-  padding: 0 20px;
+  gap: 0; /* remove spacing */
+
+  width: 100%;
+  max-width: none; /* remove container limit */
+
+  margin: 0; /* remove centering margin */
+  padding: 0; /* remove side padding */
 }
-
 
 /* Each item */
 .footer-gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
-  aspect-ratio: 4 / 3; /* rectangular shape */
+
+  border-radius: 0; /* square edges */
+
+  aspect-ratio: 16 / 9;
   display: block;
 }
 
