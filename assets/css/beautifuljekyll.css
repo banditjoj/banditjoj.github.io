@@ -342,6 +342,70 @@ layout: null
   transform: scale(1.12);
 }
 
+/* Overlay Layer */
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+  opacity: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 0.3s ease;
+}
+
+
+/* Text container */
+.footer-overlay-text {
+  text-align: center;
+  color: white;
+
+  transform: translateY(10px);
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Title */
+.footer-overlay-text h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+
+/* "View" text */
+.footer-overlay-text span {
+  display: inline-block;
+  margin-top: 6px;
+
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+
+  opacity: 0.85;
+}
+
+
+/* Hover effects */
+.footer-gallery-item:hover .footer-overlay {
+  opacity: 1;
+}
+
+.footer-gallery-item:hover .footer-overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
