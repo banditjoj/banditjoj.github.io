@@ -182,19 +182,6 @@ layout: null
   transform: translate(-50%, -50%);
 }
 
-/* Click layer to close */
-.lightbox-video::after {
-  content: "";
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  cursor: pointer;
-}
-
 /* lightbox navigation */
 .lightbox .prev,
 .lightbox .next,
@@ -235,6 +222,30 @@ layout: null
   font-size: 32px;
 }
 
+/* Invisible background close layer */
+.overlay-close {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Make sure image/video is above overlay */
+.lightbox span,
+.lightbox-video video {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make sure buttons are on top */
+.lightbox .prev,
+.lightbox .next,
+.lightbox .close,
+.lightbox-video .prev,
+.lightbox-video .next,
+.lightbox-video .close {
+  z-index: 3;
+}
 
 html {
   scroll-behavior: smooth;
