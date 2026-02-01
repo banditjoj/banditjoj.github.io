@@ -206,24 +206,24 @@ layout: null
   z-index: 10;
 }
 
-/* Left 20% = previous */
+/* Left 35% = previous */
 .zone-prev {
   left: 0;
-  width: 20%;
+  width: 35%;
   cursor: w-resize;
 }
 
-/* Middle 60% = close */
+/* Middle 30% = close */
 .zone-close {
-  left: 20%;
-  width: 60%;
+  left: 35%;
+  width: 30%;
   cursor: zoom-out;
 }
 
-/* Right 20% = next */
+/* Right 35% = next */
 .zone-next {
   right: 0;
-  width: 20%;
+  width: 35%;
   cursor: e-resize;
 }
 
