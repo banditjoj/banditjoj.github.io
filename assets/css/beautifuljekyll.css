@@ -589,10 +589,12 @@ img {
 /*Instagram LinkedIn font*/
 .navbar-custom a[href*="instagram.com"] {
   font-family: 'Glyphter', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .navbar-custom a[href*="linkedin.com"] {
   font-family: 'Glyphter', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .navbar-custom .navbar-brand {
@@ -666,8 +668,8 @@ img {
   .navbar-custom {
     padding-top: 1.25rem;
     padding-bottom: 0.75rem;
-    padding-left: 0.875rem;
-    padding-right: 0.875rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .navbar-custom .navbar-brand-logo {
