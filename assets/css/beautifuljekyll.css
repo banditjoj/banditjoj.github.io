@@ -562,7 +562,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background-color: var(--navbar-col);
+  background-color: var(#2c2c2c);
   border-bottom: 1px solid var(--navbar-border-col);
   font-family: var(--header-font);
   {% if site.navbar-img %}
