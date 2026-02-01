@@ -116,7 +116,7 @@ layout: null
   padding-top: 40px;
   
   /* Translucent background */
-  background: rgba(224, 224, 224, 0.8);
+  background: rgba(33, 33, 33, 0.8);
 }
 
 /* Unhide the lightbox when it's the target */
@@ -159,7 +159,7 @@ layout: null
 
   padding-top: 40px;
 
-  background: rgba(224, 224, 224, 0.8);
+  background: rgba(33, 33, 33, 0.8);
 }
 
 .lightbox-video:target {
