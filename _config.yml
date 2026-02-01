@@ -152,14 +152,14 @@ keywords: "jojo lu,concept art,design,vis dev,banditjoj,artist,art"
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-page-col: "#333333"
+page-col: "#918b89"
 text-col: "#EEE"
 link-col: "#EEE"
 hover-col: "#2c6b74"
 navbar-col: "#EEE"
 navbar-text-col: "#aa4a44"
 navbar-border-col: "#22222200"
-footer-col: "#333333"
+footer-col: "#918b89"
 footer-text-col: "#EEE"
 footer-link-col: "#44c9a8"
 footer-hover-col: "#44c9a8"
