@@ -276,6 +276,24 @@ layout: null
   }
 }
 
+/* Hide navigation zones by default */
+.zone-prev,
+.zone-next,
+.zone-close {
+  display: none;
+}
+
+/* Show zones only when the lightbox is active */
+.lightbox:target .zone-prev,
+.lightbox:target .zone-next,
+.lightbox:target .zone-close,
+.lightbox-video:target .zone-prev,
+.lightbox-video:target .zone-next,
+.lightbox-video:target .zone-close {
+  display: block;
+}
+
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
