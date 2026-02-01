@@ -562,13 +562,13 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom .dropdown-menu {
-  background-color: #2c2c2c !important; /* dark grey */
+  background-color: #EEE !important; /* dark grey */
   border: none !important;
   padding: 0;
 }
 
 .navbar-custom {
-  background-color: var(#2c2c2c);
+  background-color: var(--navbar-col);
   border-bottom: 1px solid var(--navbar-border-col);
   font-family: var(--header-font);
   {% if site.navbar-img %}
