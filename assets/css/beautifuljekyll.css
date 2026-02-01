@@ -293,6 +293,19 @@ layout: null
   display: block;
 }
 
+.zone-prev::before,
+.zone-next::before {
+  display: none;
+}
+
+.lightbox:target .zone-prev::before,
+.lightbox:target .zone-next::before,
+.lightbox-video:target .zone-prev::before,
+.lightbox-video:target .zone-next::before {
+  display: block;
+}
+
+
 
 html {
   scroll-behavior: smooth;
