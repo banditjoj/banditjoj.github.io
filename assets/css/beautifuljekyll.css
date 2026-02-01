@@ -637,7 +637,7 @@ img {
 
 .navbar-custom .navbar-nav .nav-link {
   padding-top: 0.75rem;   /* reduced from 0.9375rem */
-  padding-bottom: 0.675rem;
+  padding-bottom: 0.75rem;
 }
 
 .navbar-custom .navbar-brand,
