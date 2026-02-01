@@ -239,6 +239,40 @@ layout: null
   cursor: zoom-out;
 }
 
+/* nav arrows */
+/* Visual arrows inside the clickable zones */
+.zone-prev::before,
+.zone-next::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 64px;
+  font-weight: bold;
+  color: #333;
+  pointer-events: none; /* so clicks pass through to the zone itself */
+}
+
+/* Left arrow */
+.zone-prev::before {
+  content: '<';
+  left: 20px; /* distance from left edge of zone */
+}
+
+/* Right arrow */
+.zone-next::before {
+  content: '>';
+  right: 20px; /* distance from right edge of zone */
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 768px) {
+  .zone-prev::before,
+  .zone-next::before {
+    display: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 130px;
