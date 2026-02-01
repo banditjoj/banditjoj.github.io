@@ -195,6 +195,46 @@ layout: null
   cursor: pointer;
 }
 
+/* lightbox navigation */
+.lightbox .prev,
+.lightbox .next,
+.lightbox .close,
+.lightbox-video .prev,
+.lightbox-video .next,
+.lightbox-video .close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #333;
+  font-size: 48px;
+  text-decoration: none;
+
+  padding: 10px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+
+  z-index: 1000;
+}
+
+.lightbox .prev,
+.lightbox-video .prev {
+  left: 20px;
+}
+
+.lightbox .next,
+.lightbox-video .next {
+  right: 20px;
+}
+
+.lightbox .close,
+.lightbox-video .close {
+  top: 20px;
+  right: 20px;
+  transform: none;
+  font-size: 32px;
+}
+
 
 html {
   scroll-behavior: smooth;
