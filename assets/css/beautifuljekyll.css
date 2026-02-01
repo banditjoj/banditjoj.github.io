@@ -583,8 +583,8 @@ img {
 .navbar-custom,
 .navbar-custom.top-nav-short,
 .navbar-custom.top-nav-short-permanent {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /*Instagram LinkedIn font*/
