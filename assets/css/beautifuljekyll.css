@@ -146,21 +146,20 @@ layout: null
 
 /* Video Lightbox */
 
-.lightbox-video {
-  display: none;
+.lightbox-video video {
+  display: block;
 
-  position: fixed;
-  z-index: 999;
+  max-width: 90%;
+  max-height: 90vh;
 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed; /* ← change */
 
-  padding-top: 40px;
+  top: 50%;
+  left: 50%;
 
-  background: rgba(224, 224, 224, 0.8);
+  transform: translate(-50%, -50%);
 }
+
 
 .lightbox-video:target {
   display: block;
@@ -182,52 +181,36 @@ layout: null
   transform: translate(-50%, -50%);
 }
 
-/* lightbox navigation */
-.lightbox .prev,
-.lightbox .next,
-.lightbox .close,
-.lightbox-video .prev,
-.lightbox-video .next,
-.lightbox-video .close {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+/* Click zones for navigation */
 
-  color: #333;
-  font-size: 48px;
-  text-decoration: none;
-
-  padding: 10px;
-  background: rgba(255,255,255,0.6);
-  border-radius: 50%;
-
-  z-index: 3;
-}
-
-.lightbox .prev,
-.lightbox-video .prev {
-  left: 20px;
-}
-
-.lightbox .next,
-.lightbox-video .next {
-  right: 20px;
-}
-
-.lightbox .close,
-.lightbox-video .close {
-  top: 20px;
-  right: 20px;
-  transform: none;
-  font-size: 32px;
-}
-
-/* Invisible background close layer */
-.overlay-close {
+.zone-prev,
+.zone-next,
+.zone-close {
   position: fixed;
-  inset: 0;
-  z-index: 1;
-  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Left 40% = previous */
+.zone-prev {
+  left: 0;
+  width: 40%;
+  cursor: w-resize;
+}
+
+/* Middle 20% = close */
+.zone-close {
+  left: 40%;
+  width: 20%;
+  cursor: zoom-out;
+}
+
+/* Right 40% = next */
+.zone-next {
+  right: 0;
+  width: 40%;
+  cursor: e-resize;
 }
 
 /* Make sure image/video is above overlay */
@@ -237,17 +220,7 @@ layout: null
   z-index: 2;
 }
 
-/* Make sure buttons are on top */
-.lightbox .prev,
-.lightbox .next,
-.lightbox .close,
-.lightbox-video .prev,
-.lightbox-video .next,
-.lightbox-video .close {
-  z-index: 3;
-}
-
-/* fx? */
+/* zoom out cursor on lightbox */
 .lightbox,
 .lightbox-video {
   cursor: zoom-out;
