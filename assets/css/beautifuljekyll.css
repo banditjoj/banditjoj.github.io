@@ -233,10 +233,14 @@ layout: null
   z-index: 2;
 }
 
-/* zoom out cursor on lightbox */
+/* zoom cursor on lightbox */
 .lightbox,
 .lightbox-video {
   cursor: zoom-out;
+}
+
+.gallery a {
+  cursor: zoom-in;
 }
 
 /* nav arrows */
@@ -247,22 +251,21 @@ layout: null
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 64px;
-  font-weight: bold;
-  color: #333;
+  font-size: 32px;
+  color: #555;
   pointer-events: none; /* so clicks pass through to the zone itself */
 }
 
 /* Left arrow */
 .zone-prev::before {
-  content: '<';
-  left: 20px; /* distance from left edge of zone */
+  content: '←';
+  left: 40px; /* distance from left edge of zone */
 }
 
 /* Right arrow */
 .zone-next::before {
-  content: '>';
-  right: 20px; /* distance from right edge of zone */
+  content: '→';
+  right: 40px; /* distance from right edge of zone */
 }
 
 /* Hide arrows on mobile */
