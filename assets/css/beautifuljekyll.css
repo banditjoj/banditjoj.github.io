@@ -201,7 +201,7 @@ layout: null
   background: rgba(255,255,255,0.6);
   border-radius: 50%;
 
-  z-index: 1000;
+  z-index: 3;
 }
 
 .lightbox .prev,
@@ -245,6 +245,12 @@ layout: null
 .lightbox-video .next,
 .lightbox-video .close {
   z-index: 3;
+}
+
+/* fx? */
+.lightbox,
+.lightbox-video {
+  cursor: zoom-out;
 }
 
 html {
