@@ -230,7 +230,6 @@ layout: null
 /* Make sure image/video is above overlay */
 .lightbox span,
 .lightbox-video video {
-  position: relative;
   z-index: 2;
 }
 
