@@ -107,7 +107,7 @@ layout: null
 
   /* Overlay entire screen */
   position: fixed;
-  z-index: 1001;
+  z-index: 2001;
   top: 0;
   left: 0;
   right: 0;
@@ -150,7 +150,7 @@ layout: null
   display: none;
 
   position: fixed;
-  z-index: 1050;
+  z-index: 2050;
 
   top: 0;
   left: 0;
@@ -203,7 +203,7 @@ layout: null
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 1070;
+  z-index: 2070;
 }
 
 /* Left 35% = previous */
@@ -230,7 +230,7 @@ layout: null
 /* Make sure image/video is above overlay */
 .lightbox span,
 .lightbox-video video {
-  z-index: 1060;
+  z-index: 2060;
 }
 
 /* zoom cursor on lightbox */
