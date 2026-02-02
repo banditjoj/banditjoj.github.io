@@ -209,21 +209,21 @@ layout: null
 /* Left 35% = previous */
 .zone-prev {
   left: 0;
-  width: 25%;
+  width: 20%;
   cursor: w-resize;
 }
 
 /* Middle 30% = close */
 .zone-close {
   left: 25%;
-  width: 50%;
+  width: 60%;
   cursor: zoom-out;
 }
 
 /* Right 35% = next */
 .zone-next {
   right: 0;
-  width: 25%;
+  width: 20%;
   cursor: e-resize;
 }
 
