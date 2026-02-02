@@ -66,8 +66,8 @@ layout: null
 .gallery {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 8px;
+    margin-bottom: 8px;
     align-items: center;
 }
 
