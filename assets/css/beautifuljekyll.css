@@ -31,13 +31,13 @@ layout: null
   --mid-col: #808080;
 }
 
-.char-red { color: #f9b0cb !important; }    /* A */
-.char-orange { color: #fccea2 !important; } /* B */
-.char-yellow { color: #f9e598 !important; } /* C */
-.char-green { color: #cefb99 !important; }  /* d */
-.char-blue { color: #8cf2ea !important; }   /* e */
-.char-indigo { color: #c1c8ff !important; } /* F */
-.char-violet { color: #e4b5ff !important; } /* G */
+.char-red { color: #ffa2a5 !important; }    /* A */
+.char-orange { color: #ffa957 !important; } /* B */
+.char-yellow { color: #ffd833 !important; } /* C */
+.char-green { color: #9ee816 !important; }  /* d */
+.char-blue { color: #2be4dc !important; }   /* e */
+.char-indigo { color: #6fc8f7 !important; } /* F */
+.char-violet { color: #e1adff !important; } /* G */
 
 /* --- General --- */
 .custom-width {
