@@ -215,7 +215,7 @@ layout: null
 
 /* Middle 30% = close */
 .zone-close {
-  left: 25%;
+  left: 20%;
   width: 60%;
   cursor: zoom-out;
 }
