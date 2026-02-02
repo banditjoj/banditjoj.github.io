@@ -39,35 +39,6 @@ layout: null
 .char-indigo { color: #6fc8f7 !important; } /* F */
 .char-violet { color: #e1adff !important; } /* G */
 
-/* White outline for logo text */
-.navbar-custom .char-red,
-.navbar-custom .char-orange,
-.navbar-custom .char-yellow,
-.navbar-custom .char-green,
-.navbar-custom .char-blue,
-.navbar-custom .char-indigo,
-.navbar-custom .char-violet {
-  text-shadow:
-    -1px -1px 0 #fff,
-     1px -1px 0 #fff,
-    -1px  1px 0 #fff,
-     1px  1px 0 #fff;
-}
-
-.navbar-custom.top-nav-short .char-red,
-.navbar-custom.top-nav-short .char-orange,
-.navbar-custom.top-nav-short .char-yellow,
-.navbar-custom.top-nav-short .char-green,
-.navbar-custom.top-nav-short .char-blue,
-.navbar-custom.top-nav-short .char-indigo,
-.navbar-custom.top-nav-short .char-violet {
-  text-shadow:
-    -1px -1px 0 rgba(255,255,255,0.8),
-     1px -1px 0 rgba(255,255,255,0.8),
-    -1px  1px 0 rgba(255,255,255,0.8),
-     1px  1px 0 rgba(255,255,255,0.8);
-}
-
 /* --- General --- */
 .custom-width {
   width: 90%;
