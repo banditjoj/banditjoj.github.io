@@ -18,8 +18,17 @@ layout: page
 <meta name="twitter:description" content="Concept art, visual development, and background design portfolio by JoJo Lu." />
 <meta name="twitter:image" content="https://banditjoj.com/assets/img/front/95.jpg" />
 
-<div id="gallery-1" class="gallery" style="--gallery-height: 700px;">
-  <a href="#img1">
+<div id="gallery-1" class="gallery" style="--gallery-height: 1000px;">
+  <a href="#img1"><img src="https://banditjoj.com/assets/img/front/95.jpg"></a>
+  <a href="#img2"><img src="https://banditjoj.com/assets/img/front/FishEye.jpg"></a>
+</div>
+
+<div id="gallery-2" class="gallery" style="--gallery-height: 500px;">
+  <a href="#img3"><img src="https://banditjoj.com/assets/img/front/FishEyeThumbs.jpg"></a>
+</div>
+
+<div id="gallery-3" class="gallery" style="--gallery-height: 700px;">
+  <a href="#img4">
     <video
       src="https://banditjoj.com/assets/img/front/SideQuest_nosound.mp4"
       autoplay
@@ -28,7 +37,7 @@ layout: page
       playsinline>
     </video>
   </a>
-  <a href="#img2">
+  <a href="#img5">
     <video
       src="https://banditjoj.com/assets/img/front/Train_reduced.mp4"
       autoplay
@@ -37,15 +46,6 @@ layout: page
       playsinline>
     </video>
   </a>
-</div>
-
-<div id="gallery-2" class="gallery" style="--gallery-height: 1000px;">
-  <a href="#img3"><img src="https://banditjoj.com/assets/img/front/95.jpg"></a>
-  <a href="#img4"><img src="https://banditjoj.com/assets/img/front/FishEye.jpg"></a>
-</div>
-
-<div id="gallery-3" class="gallery" style="--gallery-height: 500px;">
-  <a href="#img5"><img src="https://banditjoj.com/assets/img/front/FishEyeThumbs.jpg"></a>
 </div>
 
 <div id="gallery-4" class="gallery" style="--gallery-height: 500px;">
@@ -79,10 +79,32 @@ layout: page
   </a>
 </div>
 
-<div class="lightbox-video" id="img1">
-
+<div class="lightbox" id="img1">
   <a href="#gallery-1" class="overlay-close"></a>
+  <span style="background-image:url('https://banditjoj.com/assets/img/front/95.jpg')"></span>
+  <a class="zone-prev" href="#img16"></a>
+  <a class="zone-close" href="#gallery-1"></a>
+  <a class="zone-next" href="#img2"></a>
+</div>
 
+<div class="lightbox" id="img2">
+  <a href="#gallery-1" class="overlay-close"></a>
+  <span style="background-image:url('https://banditjoj.com/assets/img/front/FishEye.jpg')"></span>
+  <a class="zone-prev" href="#img1"></a>
+  <a class="zone-close" href="#gallery-1"></a>
+  <a class="zone-next" href="#img3"></a>
+</div>
+
+<div class="lightbox" id="img3">
+  <a href="#gallery-2" class="overlay-close"></a>
+  <span style="background-image:url('https://banditjoj.com/assets/img/front/FishEyeThumbs.jpg')"></span>
+  <a class="zone-prev" href="#img2"></a>
+  <a class="zone-close" href="#gallery-2"></a>
+  <a class="zone-next" href="#img4"></a>
+</div>
+
+<div class="lightbox-video" id="img4">
+  <a href="#gallery-3" class="overlay-close"></a>
   <video
       src="https://banditjoj.com/assets/img/front/SideQuest_nosound.mp4"
       autoplay
@@ -90,17 +112,13 @@ layout: page
       muted
       playsinline>
     </video>
-
-  <a class="zone-prev" href="#img16"></a>
-  <a class="zone-close" href="#gallery-1"></a>
-  <a class="zone-next" href="#img2"></a>
-
+  <a class="zone-prev" href="#img3"></a>
+  <a class="zone-close" href="#gallery-3"></a>
+  <a class="zone-next" href="#img5"></a>
 </div>
 
-<div class="lightbox-video" id="img2">
-
-  <a href="#gallery-1" class="overlay-close"></a>
-
+<div class="lightbox-video" id="img5">
+  <a href="#gallery-3" class="overlay-close"></a>
   <video
       src="https://banditjoj.com/assets/img/front/Train_reduced.mp4"
       autoplay
@@ -108,173 +126,93 @@ layout: page
       muted
       playsinline>
     </video>
-
-  <a class="zone-prev" href="#img1"></a>
-  <a class="zone-close" href="#gallery-1"></a>
-  <a class="zone-next" href="#img3"></a>
-
-</div>
-
-<div class="lightbox" id="img3">
-
-  <a href="#gallery-2" class="overlay-close"></a>
-
-  <span style="background-image:url('https://banditjoj.com/assets/img/front/95.jpg')"></span>
-
-  <a class="zone-prev" href="#img2"></a>
-  <a class="zone-close" href="#gallery-2"></a>
-  <a class="zone-next" href="#img4"></a>
-
-</div>
-
-<div class="lightbox" id="img4">
-
-  <a href="#gallery-2" class="overlay-close"></a>
-
-  <span style="background-image:url('https://banditjoj.com/assets/img/front/FishEye.jpg')"></span>
-
-  <a class="zone-prev" href="#img3"></a>
-  <a class="zone-close" href="#gallery-2"></a>
-  <a class="zone-next" href="#img5"></a>
-
-</div>
-
-<div class="lightbox" id="img5">
-
-  <a href="#gallery-3" class="overlay-close"></a>
-
-  <span style="background-image:url('https://banditjoj.com/assets/img/front/FishEyeThumbs.jpg')"></span>
-
   <a class="zone-prev" href="#img4"></a>
   <a class="zone-close" href="#gallery-3"></a>
   <a class="zone-next" href="#img6"></a>
-
 </div>
 
 <div class="lightbox" id="img6">
-
   <a href="#gallery-4" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/inferno/JoJoLu-Gluttony.jpg')"></span>
-
   <a class="zone-prev" href="#img5"></a>
   <a class="zone-close" href="#gallery-4"></a>
   <a class="zone-next" href="#img7"></a>
-
 </div>
 
 <div class="lightbox" id="img7">
-
   <a href="#gallery-4" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/inferno/JoJoLu-Inferno1.jpg')"></span>
-
   <a class="zone-prev" href="#img6"></a>
   <a class="zone-close" href="#gallery-4"></a>
   <a class="zone-next" href="#img8"></a>
-
 </div>
 
 <div class="lightbox" id="img8">
-
   <a href="#gallery-4" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/front/3.jpg')"></span>
-
   <a class="zone-prev" href="#img7"></a>
   <a class="zone-close" href="#gallery-4"></a>
   <a class="zone-next" href="#img9"></a>
-
 </div>
 
 <div class="lightbox" id="img9">
-
   <a href="#gallery-5" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/AQO/JoJoLu-AQO_12.jpg')"></span>
-
   <a class="zone-prev" href="#img8"></a>
   <a class="zone-close" href="#gallery-5"></a>
   <a class="zone-next" href="#img10"></a>
-
 </div>
 
 <div class="lightbox" id="img10">
-
   <a href="#gallery-5" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/AQO/JoJoLu-AQO_13.jpg')"></span>
-
   <a class="zone-prev" href="#img9"></a>
   <a class="zone-close" href="#gallery-5"></a>
   <a class="zone-next" href="#img11"></a>
-
 </div>
 
 <div class="lightbox" id="img11">
-
   <a href="#gallery-5" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/AQO/JoJoLu-AQO_14.jpg')"></span>
-
   <a class="zone-prev" href="#img10"></a>
   <a class="zone-close" href="#gallery-5"></a>
   <a class="zone-next" href="#img12"></a>
-
 </div>
 
 <div class="lightbox" id="img12">
-
   <a href="#gallery-6" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/illust/JoJoLu-GoodGame.jpg')"></span>
-
   <a class="zone-prev" href="#img11"></a>
   <a class="zone-close" href="#gallery-6"></a>
   <a class="zone-next" href="#img13"></a>
-
 </div>
 
 <div class="lightbox" id="img13">
-
   <a href="#gallery-6" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/illust/JoJoLu-breakfast.jpg')"></span>
-
   <a class="zone-prev" href="#img12"></a>
   <a class="zone-close" href="#gallery-6"></a>
   <a class="zone-next" href="#img14"></a>
-
 </div>
 
 <div class="lightbox" id="img14">
-
   <a href="#gallery-7" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/illust/JoJoLu-Clouds.jpg')"></span>
-
   <a class="zone-prev" href="#img13"></a>
   <a class="zone-close" href="#gallery-7"></a>
   <a class="zone-next" href="#img15"></a>
-
 </div>
 
 <div class="lightbox" id="img15">
-
   <a href="#gallery-7" class="overlay-close"></a>
-
   <span style="background-image:url('https://banditjoj.com/assets/img/bunnybun/JoJoLu-LifeofBunnyBun_4.jpg')"></span>
-
   <a class="zone-prev" href="#img14"></a>
   <a class="zone-close" href="#gallery-7"></a>
   <a class="zone-next" href="#img16"></a>
-
 </div>
 
 <div class="lightbox-video" id="img16">
-
   <a href="#gallery-7" class="overlay-close"></a>
-
   <video
       src="https://banditjoj.com/assets/img/front/CarMirror_nosound.mp4"
       autoplay
@@ -282,9 +220,7 @@ layout: page
       muted
       playsinline>
     </video>
-
   <a class="zone-prev" href="#img15"></a>
   <a class="zone-close" href="#gallery-7"></a>
   <a class="zone-next" href="#img1"></a>
-
 </div>
