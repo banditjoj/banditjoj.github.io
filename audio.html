@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Audio Player</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+  :root {
+    --bg:      #0f0f17;
+    --bg2:     #1a1a28;
+    --bg3:     #252538;
+    --text:    #e2e0f0;
+    --dim:     #5a5878;
+    --accent:  #7eb8f7;
+    --accent2: #b49ffc;
+    --loop:    #f4a261;
+    --border:  #2e2e48;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Status bar ── */
+  #status {
+    font-size: 11px;
+    color: var(--dim);
+    padding: 8px 16px 4px;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+  }
+
+  /* ── Subtitle area ── */
+  #sub-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
+    overflow: hidden;
+  }
+
+  #sub-box {
+    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: clamp(22px, 5vw, 38px);
+    line-height: 1.55;
+    text-align: center;
+    color: var(--text);
+    word-break: keep-all;
+    transition: opacity 0.15s;
+    max-width: 800px;
+  }
+
+  #sub-box.fade { opacity: 0.3; }
+
+  /* ── Timeline ── */
+  #timeline-wrap {
+    padding: 0 16px 4px;
+    flex-shrink: 0;
+  }
+
+  #timeline {
+    width: 100%;
+    height: 44px;
+    cursor: pointer;
+    position: relative;
+    touch-action: none;
+  }
+
+  #time-label {
+    font-size: 11px;
+    color: var(--dim);
+    text-align: center;
+    padding-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Controls ── */
+  #controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 16px 16px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    background: var(--bg3);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.08s;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+  }
+
+  .btn:active { transform: scale(0.95); background: var(--bg2); }
+
+  .btn.primary {
+    background: var(--bg3);
+    border-color: var(--accent);
+    color: var(--accent);
+    min-width: 110px;
+    text-align: center;
+  }
+
+  .btn.loop-on {
+    border-color: var(--loop);
+    color: var(--loop);
+  }
+
+  .btn.open-btn {
+    border-color: var(--accent2);
+    color: var(--accent2);
+  }
+
+  /* ── File inputs (hidden) ── */
+  input[type=file] { display: none; }
+
+  /* ── Drop overlay ── */
+  #drop-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(126, 184, 247, 0.12);
+    border: 3px dashed var(--accent);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+  }
+  #drop-overlay.show { display: flex; }
+</style>
+</head>
+<body>
+
+<div id="status">Open an MP3 and SRT file to begin.</div>
+
+<div id="sub-wrap">
+  <div id="sub-box">—</div>
+</div>
+
+<div id="timeline-wrap">
+  <canvas id="timeline"></canvas>
+  <div id="time-label">0:00 / 0:00</div>
+</div>
+
+<div id="controls">
+  <button class="btn open-btn" onclick="document.getElementById('pick-mp3').click()">Open MP3</button>
+  <button class="btn open-btn" onclick="document.getElementById('pick-srt').click()">Open SRT</button>
+  <button class="btn" id="prev-btn" onclick="goPrev()">◀◀</button>
+  <button class="btn primary" id="play-btn" onclick="playPause()">▶ Play</button>
+  <button class="btn" id="next-btn" onclick="goNext()">▶▶</button>
+  <button class="btn" id="loop-btn" onclick="toggleLoop()">⟳ Loop</button>
+</div>
+
+<input type="file" id="pick-mp3" accept=".mp3,audio/*">
+<input type="file" id="pick-srt" accept=".srt,text/plain">
+<div id="drop-overlay">Drop MP3 or SRT here</div>
+
+<audio id="audio" preload="auto"></audio>
+
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+const audio    = document.getElementById('audio');
+const subBox   = document.getElementById('sub-box');
+const playBtn  = document.getElementById('play-btn');
+const loopBtn  = document.getElementById('loop-btn');
+const timeline = document.getElementById('timeline');
+const ctx      = timeline.getContext('2d');
+const timeLabel = document.getElementById('time-label');
+const statusEl  = document.getElementById('status');
+
+let subtitles   = [];
+let currentSub  = -1;
+let looping     = false;
+let mp3Loaded   = false;
+let srtLoaded   = false;
+let animFrame   = null;
+let mp3Name     = '';
+let srtName     = '';
+
+// ── SRT Parser ─────────────────────────────────────────────────────────────
+function parseSRT(text) {
+  const entries = [];
+  const blocks  = text.trim().split(/\n\s*\n/);
+  for (const block of blocks) {
+    const lines = block.trim().split('\n');
+    if (lines.length < 2) continue;
+    const timeLine = lines.find(l => l.includes('-->'));
+    if (!timeLine) continue;
+    const toMs = ts => {
+      ts = ts.trim().replace(',', '.');
+      const [h, m, rest] = ts.split(':');
+      const [s, ms] = rest.split('.');
+      return +h*3600000 + +m*60000 + +s*1000 + +ms;
+    };
+    try {
+      const [startStr, endStr] = timeLine.split('-->');
+      const start_ms = toMs(startStr);
+      const end_ms   = toMs(endStr);
+      const textLines = lines.filter(l => !l.trim().match(/^\d+$/) && !l.includes('-->'));
+      const text = textLines.join(' ').trim();
+      if (text) entries.push({ start_ms, end_ms, text });
+    } catch(e) {}
+  }
+  return entries;
+}
+
+// ── File loading ───────────────────────────────────────────────────────────
+document.getElementById('pick-mp3').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  mp3Name = file.name;
+  const url = URL.createObjectURL(file);
+  audio.src = url;
+  mp3Loaded = true;
+  setStatus(`MP3: ${mp3Name}${srtLoaded ? ' — ready' : ' — now open SRT'}`);
+  tryStart();
+  e.target.value = '';
+});
+
+document.getElementById('pick-srt').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  srtName = file.name;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    subtitles  = parseSRT(ev.target.result);
+    srtLoaded  = true;
+    currentSub = -1;
+    showSubtitle(-1);
+    setStatus(`SRT: ${srtName} (${subtitles.length} subs)${mp3Loaded ? ' — ready' : ' — now open MP3'}`);
+    drawTimeline();
+    tryStart();
+  };
+  reader.readAsText(file, 'utf-8');
+  e.target.value = '';
+});
+
+function tryStart() {
+  if (mp3Loaded && srtLoaded) {
+    setStatus(`${mp3Name}`);
+    startLoop();
+  }
+}
+
+// ── Audio controls ─────────────────────────────────────────────────────────
+function playPause() {
+  if (!mp3Loaded) return;
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = '⏸ Pause';
+  } else {
+    audio.pause();
+    playBtn.textContent = '▶ Play';
+  }
+}
+
+function seekToSub(idx) {
+  if (!subtitles[idx]) return;
+  audio.currentTime = subtitles[idx].start_ms / 1000;
+  currentSub = idx;
+  showSubtitle(idx);
+}
+
+function goNext() {
+  if (!subtitles.length) return;
+  const ms  = audio.currentTime * 1000;
+  const idx = subtitles.findIndex(s => s.start_ms > ms);
+  seekToSub(idx < 0 ? subtitles.length - 1 : idx);
+}
+
+function goPrev() {
+  if (!subtitles.length) return;
+  const idx = Math.max(0, currentSub > 0 ? currentSub - 1 : 0);
+  seekToSub(idx);
+}
+
+function toggleLoop() {
+  looping = !looping;
+  loopBtn.classList.toggle('loop-on', looping);
+  setStatus(looping ? `Looping sub ${currentSub + 1}  —  tap Loop to stop` : 'Loop off');
+}
+
+// ── Subtitle sync ──────────────────────────────────────────────────────────
+audio.addEventListener('ended', () => {
+  audio.currentTime = 0;
+  audio.play();
+  playBtn.textContent = '⏸ Pause';
+});
+
+function findSubAt(ms) {
+  for (let i = 0; i < subtitles.length; i++) {
+    const s = subtitles[i];
+    if (ms >= s.start_ms && ms <= s.end_ms) return i;
+  }
+  return -1;
+}
+
+function showSubtitle(idx) {
+  currentSub = idx;
+  if (idx < 0 || idx >= subtitles.length) {
+    subBox.textContent = '—';
+    return;
+  }
+  const raw  = subtitles[idx].text;
+  const text = raw.replace(/([.!?。])\s+/g, '$1\n').trim();
+  subBox.textContent = text;
+}
+
+function startLoop() {
+  if (animFrame) cancelAnimationFrame(animFrame);
+  function tick() {
+    const ms  = audio.currentTime * 1000;
+    // Loop logic
+    if (looping && currentSub >= 0 && currentSub < subtitles.length) {
+      if (ms >= subtitles[currentSub].end_ms) {
+        audio.currentTime = subtitles[currentSub].start_ms / 1000;
+        animFrame = requestAnimationFrame(tick);
+        return;
+      }
+    }
+    const idx = findSubAt(ms);
+    if (idx !== currentSub) showSubtitle(idx);
+    updatePlayhead(ms);
+    animFrame = requestAnimationFrame(tick);
+  }
+  tick();
+}
+
+// ── Timeline ───────────────────────────────────────────────────────────────
+function resizeTimeline() {
+  timeline.width  = timeline.offsetWidth * devicePixelRatio;
+  timeline.height = timeline.offsetHeight * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+  drawTimeline();
+}
+
+function msToStr(ms) {
+  const s = Math.floor(ms / 1000);
+  return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+}
+
+function drawTimeline() {
+  const W = timeline.offsetWidth;
+  const H = timeline.offsetHeight;
+  const cy = H / 2;
+  ctx.clearRect(0, 0, W, H);
+  // Track
+  ctx.fillStyle = '#2a2a42';
+  ctx.beginPath();
+  ctx.roundRect(0, cy - 3, W, 6, 3);
+  ctx.fill();
+  // Subtitle ticks
+  if (subtitles.length && audio.duration) {
+    ctx.fillStyle = '#4a4a6a';
+    for (const s of subtitles) {
+      const x = s.start_ms / (audio.duration * 1000) * W;
+      ctx.fillRect(x, cy - 8, 1.5, 16);
+    }
+  }
+}
+
+function updatePlayhead(ms) {
+  const W   = timeline.offsetWidth;
+  const H   = timeline.offsetHeight;
+  const dur = (audio.duration || 1) * 1000;
+  const x   = ms / dur * W;
+  const cy  = H / 2;
+
+  drawTimeline();
+  // Progress
+  ctx.fillStyle = '#3a5a8a';
+  ctx.beginPath();
+  ctx.roundRect(0, cy - 3, x, 6, 3);
+  ctx.fill();
+  // Head
+  ctx.fillStyle = '#7eb8f7';
+  ctx.beginPath();
+  ctx.arc(x, cy, 8, 0, Math.PI * 2);
+  ctx.fill();
+
+  timeLabel.textContent = `${msToStr(ms)} / ${msToStr(dur)}`;
+}
+
+// Timeline click / touch
+function seekFromEvent(clientX) {
+  const rect = timeline.getBoundingClientRect();
+  const pct  = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+  const ms   = pct * (audio.duration || 0) * 1000;
+  // Snap to nearest subtitle
+  if (subtitles.length) {
+    const nearest = subtitles.reduce((best, s, i) =>
+      Math.abs(s.start_ms - ms) < Math.abs(subtitles[best].start_ms - ms) ? i : best, 0);
+    seekToSub(nearest);
+  } else {
+    audio.currentTime = ms / 1000;
+  }
+}
+
+timeline.addEventListener('click', e => seekFromEvent(e.clientX));
+timeline.addEventListener('touchstart', e => {
+  e.preventDefault();
+  seekFromEvent(e.touches[0].clientX);
+}, { passive: false });
+
+// ── Keyboard shortcuts ─────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space')      { e.preventDefault(); playPause(); }
+  else if (e.code === 'ArrowRight') goNext();
+  else if (e.code === 'ArrowLeft')  goPrev();
+  else if (e.code === 'ArrowDown')  toggleLoop();
+});
+
+// ── Drag and drop (desktop bonus) ─────────────────────────────────────────
+const dropOverlay = document.getElementById('drop-overlay');
+document.addEventListener('dragover',  e => { e.preventDefault(); dropOverlay.classList.add('show'); });
+document.addEventListener('dragleave', e => { if (!e.relatedTarget) dropOverlay.classList.remove('show'); });
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  dropOverlay.classList.remove('show');
+  for (const file of e.dataTransfer.files) {
+    const ext = file.name.split('.').pop().toLowerCase();
+    if (ext === 'mp3') {
+      mp3Name = file.name;
+      audio.src = URL.createObjectURL(file);
+      mp3Loaded = true;
+      setStatus(`MP3: ${mp3Name}${srtLoaded ? '' : ' — now open SRT'}`);
+      tryStart();
+    } else if (ext === 'srt') {
+      srtName = file.name;
+      const r = new FileReader();
+      r.onload = ev => {
+        subtitles  = parseSRT(ev.target.result);
+        srtLoaded  = true;
+        currentSub = -1;
+        showSubtitle(-1);
+        drawTimeline();
+        setStatus(`SRT: ${srtName}${mp3Loaded ? '' : ' — now open MP3'}`);
+        tryStart();
+      };
+      r.readAsText(file, 'utf-8');
+    }
+  }
+});
+
+// ── Status ─────────────────────────────────────────────────────────────────
+function setStatus(t) { statusEl.textContent = t; }
+
+// ── Init ───────────────────────────────────────────────────────────────────
+window.addEventListener('resize', resizeTimeline);
+resizeTimeline();
+</script>
+</body>
+</html>
